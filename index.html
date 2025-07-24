@@ -8,11 +8,36 @@
   rel="stylesheet"
   href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.min.css"
 >
+    <style>
+        canvas {
+            display: block;
+            margin: 0 auto;
+            border: 1px solid #ccc;
+        }
+        .game-container {
+            text-align: center;
+            margin-top: 20px;
+        }
+        .controls {
+            margin-top: 20px;
+        }
+    </style>
 </head>
 <body>
     <div class="container">
-    <h1>Tetris Kafkiano</h1>
-    <p>Acá publicaremos un tetris para convertirse en una gran cucaracha</p>
+        <h1>Tetris Kafkiano</h1>
+        <p>Acá publicaremos un tetris para convertirse en una gran cucaracha</p>
+        
+        <div class="game-container">
+            <canvas id="tetris" width="300" height="600"></canvas>
+            <div class="controls">
+                <p>Controles: ← → para mover, ↑ para rotar, ↓ para bajar más rápido, Espacio para caída inmediata</p>
+                <button id="start-button">Iniciar Juego</button>
+                <button id="pause-button">Pausar</button>
+            </div>
+        </div>
     </div>
+
+    <script src="tetris.js"></script>
 </body>
 </html>
